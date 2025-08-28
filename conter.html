@@ -3,16 +3,13 @@
 
 <head>
     <title>counter</title>
-
     <script>
         let counter = 0;
 
         function count() {
-            counter++;
             document.querySelector('h1').innerHTML = counter;
         }
-
-        document.addEventListener('DOMContentLoaded', function() {
+        addEventListener('DOMContnetLoaded', function() {
             document.querySelector('button').onclick = count;
         });
     </script>
@@ -23,4 +20,4 @@
     <button>count</button>
 </body>
 
-</html>:
+</html>
