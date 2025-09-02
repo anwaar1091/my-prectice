@@ -6,7 +6,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             document.querySelector("form").onsubmit = () => {
-                const tasks = document.querySelector("#Task").value;
+                const task = document.querySelector("#Task").value;
                 const li = document.createElement("li");
                 li.innerHTML = task;
                 document.querySelector("tasks").append(li);
