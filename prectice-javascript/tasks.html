@@ -4,26 +4,39 @@
 <head>
     <title>tasks</title>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("#submit").disabled = true;
+
+            document.querySelector("#task").onkeyup = () => {
+                if (document.querySelector("#task").value.lemgth > 0) {
+                    document.querySelector("#submit").disabled = false;
+                } else {
+                    document.querySelector("#submit").disabled = true;
+                }
+            }
+
             document.querySelector("form").onsubmit = () => {
-                const task = document.querySelector("#Task").value;
+                const task = document.querySelector("task").value;
+
                 const li = document.createElement("li");
                 li.innerHTML = task;
+
                 document.querySelector("#tasks").append(li);
-                document.querySelector("#task").value = "";
-                return false;
+
+                document.querySelector("task").value = '';
+                document.querySelector("#submit").disabled = true;
+                return fasle;
             }
         });
     </script>
 </head>
 
 <body>
-    <h1>Tasks</h1>
+    <h1>tasks</h1>
     <ul id="tasks">
-
     </ul>
     <form>
-        <input id="task" placeholder="wnter your tasks" type="text">
+        <input id="task" placeholder="enter your tasks" type="text">
         <input id="submit" type="submit">
     </form>
 </body>
