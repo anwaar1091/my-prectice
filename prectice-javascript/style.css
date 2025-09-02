@@ -17,3 +17,9 @@
         padding: 20px;
         margin: 0px;
     }
+    
+    ul {
+        text-align: center;
+        font-style: bold;
+        font-family: 'Times New Roman', Times, serif;
+    }
