@@ -6,3 +6,12 @@
         font-family: 'Times New Roman', Times, serif;
         padding: 30px;
     }
+    
+    h3 {
+        color: grey;
+        background-color: navy;
+        text-align: center;
+        font-style: bold;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 20px;
+    }
