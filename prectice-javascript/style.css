@@ -5,6 +5,7 @@
         font-style: italic;
         font-family: 'Times New Roman', Times, serif;
         padding: 30px;
+        margin: 0px;
     }
     
     h3 {
@@ -14,4 +15,5 @@
         font-style: bold;
         font-family: 'Times New Roman', Times, serif;
         padding: 20px;
+        margin: 0px;
     }
