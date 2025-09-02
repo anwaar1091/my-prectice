@@ -6,6 +6,7 @@
         font-family: 'Times New Roman', Times, serif;
         padding: 30px;
         margin: 0px;
+        border: 0px;
     }
     
     h3 {
@@ -16,6 +17,7 @@
         font-family: 'Times New Roman', Times, serif;
         padding: 20px;
         margin: 0px;
+        border: 0px;
     }
     
     ul {
