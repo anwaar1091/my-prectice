@@ -1,7 +1,8 @@
-h1 {
-    color: white;
-    background-color: blue;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-}
+    h1 {
+        color: white;
+        background-color: blue;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 10px;
+    }
