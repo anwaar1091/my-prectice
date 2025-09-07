@@ -3,42 +3,17 @@
 
 <head>
     <title>Calculator</title>
-    <script>
-        const display = document.getElementById("display");
-        const buttons = document.querySelectorAll("button");
-
-        buttons.forEach(button => {
-            button.addEventListener("click", () => {
-                if (button.id === "equals") {
-                    try {
-                        display.value = eval(display.value);
-                    } catch {
-                        display.value = "Error"; // handle invalid expression
-                    }
-                } else {
-                    const value = button.getAttribute("data-value");
-                    const operator = button.getAttribute("data-operator");
-
-                    if (value) {
-                        display.value += value; // append number
-                    } else if (operator) {
-                        display.value += operator; // append operator
-                    }
-                }
-            });
-        });
-    </script>
 </head>
 
 <body>
     <div class="calculator">
-        <input type="text" id="display">
+        <input type="text" id="display" readonly>
 
         <div class="buttons">
             <button data-value="7">7</button>
             <button data-value="8">8</button>
             <button data-value="9">9</button>
-            <button data-operator="/">÷</button>
+            <button data-operator="/">/</button>
 
             <button data-value="4">4</button>
             <button data-value="5">5</button>
@@ -55,6 +30,32 @@
             <button data-operator="+">+</button>
         </div>
     </div>
+
+    <script>
+        const display = document.getElementById("display");
+        const buttons = document.querySelectorAll("button");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                if (button.id === "equals") {
+                    try {
+                        display.value = eval(display.value);
+                    } catch {
+                        display.value = "Error";
+                    }
+                } else {
+                    const value = button.getAttribute("data-value");
+                    const operator = button.getAttribute("data-operator");
+
+                    if (value) {
+                        display.value += value;
+                    } else if (operator) {
+                        display.value += operator;
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
