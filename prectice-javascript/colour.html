@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ChatGPT-like Interface</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+            mainContent.classList.toggle('sidebar-open');
+        });
+
+        // Demo handlers for sidebar buttons
+        document.getElementById('historyBtn').addEventListener('click', () => {
+            alert('History clicked');
+        });
+
+        document.getElementById('projectsBtn').addEventListener('click', () => {
+            alert('Projects clicked');
+        });
+
+        document.getElementById('newChatBtn').addEventListener('click', () => {
+            alert('New Chat clicked');
+        });
+    </script>
 </head>
 
 <body>
@@ -33,8 +56,6 @@
             </main>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
