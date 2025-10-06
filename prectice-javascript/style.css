@@ -1,6 +1,59 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background: #202123;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.google-container {
+    text-align: center;
+}
+
+.logo {
+    width: 272px;
+    height: 92px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 500px;
+    padding: 12px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 1px 6px rgba(60, 64, 67, .3), 0 1px 1px rgba(0, 0, 0, .08);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }

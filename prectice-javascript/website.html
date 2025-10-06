@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function search() {
+            const query = document.getElementById('search-input').value;
+            if (query.trim() !== '') {
+                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(searchUrl, '_blank');
+            }
+        }
+
+        function feelingLucky() {
+            const query = document.getElementById('search-input').value;
+            if (query.trim() !== '') {
+                const luckyUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI`;
+                window.open(luckyUrl, '_blank');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="google-container">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" class="logo" />
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search Google or type a URL" />
+            <div class="buttons">
+                <button onclick="search()">Google Search</button>
+                <button onclick="feelingLucky()">I'm Feeling Lucky</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
