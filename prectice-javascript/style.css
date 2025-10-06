@@ -1,37 +1,146 @@
-    h1 {
-        color: white;
-        background-color: navy;
-        text-align: center;
-        font-style: bold;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 30px;
-        margin: 0px;
-        border: 0px;
-    }
-    
-    h3 {
-        color: white;
-        background-color: blue;
-        text-align: center;
-        font-style: bold;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 20px;
-        margin: 0px;
-        border: 0px;
-    }
-    
-    ul {
-        text-align: center;
-        font-style: bold;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    
-    form {
-        text-align: center;
-        font-style: bold;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    
-    body {
-        background-color: rgb(199, 188, 188);
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #202123;
+    color: white;
+}
+
+
+/* Container for the whole page */
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Sidebar - hidden by default */
+
+.sidebar {
+    position: fixed;
+    left: -220px;
+    top: 0;
+    height: 100%;
+    width: 220px;
+    background-color: #333;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.7);
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar button {
+    background: #444;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: #555;
+}
+
+
+/* Main content */
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 0;
+    /* space for sidebar if open */
+    transition: margin-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content.sidebar-open {
+    margin-left: 220px;
+}
+
+
+/* Top bar with search */
+
+.top-bar {
+    background: #343541;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Menu toggle button */
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+
+/* Search bar container */
+
+.search-container {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background: #40414f;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+
+/* Search input */
+
+.search-container input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    outline: none;
+}
+
+
+/* Buttons inside search */
+
+.search-btn,
+.attach-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 6px 12px;
+    margin-left: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.search-btn:hover,
+.attach-btn:hover {
+    background-color: #555;
+}
+
+.content-area {
+    padding: 20px;
+    flex-grow: 1;
+}
