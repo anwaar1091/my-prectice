@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChatGPT-like Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <button id="historyBtn">History</button>
+            <button id="projectsBtn">Projects</button>
+            <button id="newChatBtn">New Chat</button>
+        </nav>
+
+        <div class="main-content" id="mainContent">
+            <header class="top-bar">
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+                <div class="search-container">
+                    <input type="text" placeholder="Type your message..." id="searchInput" />
+                    <button class="attach-btn" aria-label="Attach file">&#128206;</button>
+                    <button class="search-btn" aria-label="Search">&#128269;</button>
+                </div>
+            </header>
+
+            <!-- Content area -->
+            <main class="content-area">
+                <p>Chat content goes here...</p>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
