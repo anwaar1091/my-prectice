@@ -1,61 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ChatGPT-like Interface</title>
-    <link rel="stylesheet" href="style.css" />
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
+    <title>gpt</title>
 
-        menuBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('show');
-            mainContent.classList.toggle('sidebar-open');
-        });
-
-        // Demo handlers for sidebar buttons
-        document.getElementById('historyBtn').addEventListener('click', () => {
-            alert('History clicked');
-        });
-
-        document.getElementById('projectsBtn').addEventListener('click', () => {
-            alert('Projects clicked');
-        });
-
-        document.getElementById('newChatBtn').addEventListener('click', () => {
-            alert('New Chat clicked');
-        });
-    </script>
 </head>
 
 <body>
-
-    <div class="container">
-        <nav class="sidebar" id="sidebar">
-            <button id="historyBtn">History</button>
-            <button id="projectsBtn">Projects</button>
-            <button id="newChatBtn">New Chat</button>
-        </nav>
-
-        <div class="main-content" id="mainContent">
-            <header class="top-bar">
-                <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
-                <div class="search-container">
-                    <input type="text" placeholder="Type your message..." id="searchInput" />
-                    <button class="attach-btn" aria-label="Attach file">&#128206;</button>
-                    <button class="search-btn" aria-label="Search">&#128269;</button>
-                </div>
-            </header>
-
-            <!-- Content area -->
-            <main class="content-area">
-                <p>Chat content goes here...</p>
-            </main>
-        </div>
-    </div>
+    <buton>home</buton>
 </body>
 
 </html>
