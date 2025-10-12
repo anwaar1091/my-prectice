@@ -29,6 +29,10 @@
             text-align: center;
             width: 100%;
             max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
         
         .search-bar {
@@ -41,6 +45,21 @@
             background-color: #2a2a2a;
             color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .search-btn {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .search-btn:hover {
+            background-color: #4a4a4a;
         }
         /* Sidebar styles */
         
@@ -112,15 +131,34 @@
     </div>
 
     <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Ask me anything..." />
+        <input type="text" class="search-bar" id="searchInput" placeholder="Ask me anything..." />
+        <button class="search-btn" id="searchBtn">Search</button>
     </div>
 
     <script>
         const toggleBtn = document.querySelector(".toggle-btn");
         const sidebar = document.getElementById("sidebar");
+        const searchBtn = document.getElementById("searchBtn");
+        const searchInput = document.getElementById("searchInput");
 
         toggleBtn.addEventListener("click", () => {
             sidebar.classList.toggle("active");
+        });
+
+        // Search button click
+        searchBtn.addEventListener("click", () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                alert("You searched for: " + query);
+                // You can replace alert with your actual search logic
+            } else {
+                alert("Please enter something to search!");
+            }
+        });
+
+        // Pressing Enter key also triggers search
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") searchBtn.click();
         });
     </script>
 
